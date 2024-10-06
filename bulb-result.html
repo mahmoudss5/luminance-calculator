@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Number of Bulbs Required</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 350px;
+        margin: auto;
+    }
+    p {
+        margin: 15px 0;
+        font-size: 16px;
+    }
+    h2 {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Number of Bulbs Required</h2>
+    <p id="bulbResultText">Calculating...</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var numBulbs = localStorage.getItem('numBulbs');
+    document.getElementById('bulbResultText').textContent = 'You will need approximately ' + numBulbs + ' bulbs.';
+});
+</script>
+</body>
+</html>
