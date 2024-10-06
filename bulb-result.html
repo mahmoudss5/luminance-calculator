@@ -7,24 +7,41 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        background-color: #121212; /* Dark background */
+        color: #e0e0e0; /* Light text color */
         margin: 0;
         padding: 20px;
     }
     .container {
-        background-color: #fff;
+        background-color: #1e1e1e; /* Darker container */
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Darker shadow */
         width: 350px;
         margin: auto;
     }
     p {
         margin: 15px 0;
         font-size: 16px;
+        color: #e0e0e0; /* Light text color */
     }
     h2 {
         text-align: center;
+        color: #ffffff; /* White text for header */
+    }
+    button {
+        padding: 10px;
+        background-color: #007BFF; /* Same color for button */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
     }
 </style>
 </head>
@@ -32,6 +49,7 @@
 <div class="container">
     <h2>Number of Bulbs Required</h2>
     <p id="bulbResultText">Calculating...</p>
+    <button onclick="goBack()">Back to Calculator</button>
 </div>
 
 <script>
@@ -39,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var numBulbs = localStorage.getItem('numBulbs');
     document.getElementById('bulbResultText').textContent = 'You will need approximately ' + numBulbs + ' bulbs.';
 });
+
+function goBack() {
+    location.href = 'index.html'; // Assuming "index.html" is the main page with the calculator
+}
 </script>
 </body>
 </html>
